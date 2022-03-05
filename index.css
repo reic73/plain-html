@@ -1,0 +1,347 @@
+:root{
+  --clr-text: #3d3d3d;
+  --clr-primary: #067E0A;
+  --clr-primary-dark: #0c570f;
+  --clr-accent: #593563;
+  --clr-accent-dark: #3e2446;
+
+  --ff-title: 'Patrick Hand', cursive, sans-serif;;
+  --ff-serif: 'Crimson Pro', serif;
+  --ff-logo: 'betterfly', sans-serif;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+html{
+  box-sizing: border-box;
+  font-family: var(--ff-serif);
+  color: var(--clr-text);
+  font-size: 1.25rem;
+}
+
+body{
+  margin:0;
+  text-align: center;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+section{
+  padding: 3em 1em;
+}
+
+.mb-0{
+  margin-bottom: 0;
+}
+/* typography */
+h1,
+h2,
+h3,
+h4,
+p{
+  margin: 0;
+}
+
+h2,
+h3{
+  font-family: var(--ff-title);
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+h2{
+  font-size: 4rem;
+}
+
+p{
+  margin-bottom: 0.85rem;
+}
+
+p:last-child{
+  margin-bottom: 0;
+}
+
+.section-title-small{
+  font-size: 3rem;
+}
+
+.section-title-small small{
+  font-size: .7em;
+  display: block;
+}
+
+.text-primary{
+  color: var(--clr-primary);
+}
+
+.logo{
+  font-family: var(--ff-logo);
+  text-align: center;
+}
+
+.logo a{
+  text-decoration: none;
+  color: black;
+}
+
+header{
+  padding: 1em 0 2em
+}
+/*  Navigation */
+nav ul{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+}
+
+nav a{
+  display: inline-block;
+  padding: 0.5em;
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+
+nav a:focus,
+nav a:hover{
+  color: var(--clr-accent);
+  text-decoration: underline;
+}
+
+.hero{
+  background-color: #555;
+  background-blend-mode: multiply;
+  background-image: url(../img/choose-adventure.jpg);
+  color: white;
+  text-align: center;
+  padding: 25vh 1em;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.about-us{
+  background: var(--clr-accent);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding:0
+}
+
+.about-us__intro{
+  background: var(--clr-accent);
+  background-image: url(../img/choose-adventure.jpg);
+  background-blend-mode: overlay;
+  padding: 3em 1em;
+  background-size: cover;
+}
+
+.about-us__body{
+  padding: 1em 1em 3em;
+}
+
+.order-online{
+  background-color: #f0f0f0;
+}
+
+.products{
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.product{
+  background-color: #f0f0f0;
+  overflow: hidden;
+  border-radius: 0.65em;
+  box-shadow: 0 0 1em rgba(0 , 0, 0, 0.2);
+  margin: 0.5rem 0;
+}
+
+.product:last-of-type{
+margin-bottom: 2em;
+}
+
+.product__content{
+  padding: 1.5em;
+}
+
+.product__title{
+  color: var(--clr-primary);
+  font-size: 2.5rem;
+  margin-bottom: .5em;
+}
+
+.fineprint{
+  font-size: .75rem;
+  color: rgba(0,0,0,.85);
+}
+
+
+/* Buttons */
+.btn-group{
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  flex-direction: column;
+}
+
+.btn{
+  padding: .75em 2.5em;
+  color: white;
+  text-decoration: none;
+  /* display: block; */
+  margin: .5em 0;
+  border-radius: .35em;
+}
+
+/* .btn + .btn{
+  margin-left: .5em;
+} */
+
+.btn-primary{
+  background-color: var(--clr-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus{
+  background-color: var(--clr-primary-dark);
+}
+
+.btn-accent{
+  background-color: var(--clr-accent);
+}
+
+.btn-accent:hover,
+.btn-accent:focus{
+  background-color: var(--clr-accent-dark);
+}
+
+footer{
+  background-color: var(--clr-accent-dark);
+  padding: 3em 1em;
+  color: white;
+  display: flex;
+  margin-top: 3em;
+  justify-content: center;
+  gap: 5em;
+}
+
+footer a{
+  color: inherit;
+}
+
+.footer-nav,
+.footer-social{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav a{
+  text-decoration: none;
+  padding: .25em;
+}
+
+.footer-nav a:hover{
+  text-decoration: underline;
+}
+
+.social-link{
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.social-icon{
+  width: 50px;
+}
+
+@media only screen and (min-width:750px){
+  section{
+    padding: 6em 1em;
+  }
+
+  .btn-group{
+    margin-top: 1em;
+    flex-direction: row;
+  }
+
+  .btn + .btn{
+    margin-left: 0.5em;
+  }
+
+  .about-us{
+    flex-direction: row;
+  }
+
+  .about-us__intro,
+  .about-us__body{
+    flex: 0 1 50%;
+    padding: auto 1em;
+    border: 2px ;
+  }
+
+  .about-us__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-us__intro{
+    text-align: right;
+  }
+
+  .about-us__intro>*{
+    max-width: 25rem;
+    margin-left: auto;
+  }
+
+  .about-us__body{
+    text-align: left;
+  }
+
+  .about-us__body>*{
+    max-width: 25rem;
+    margin-right: auto;
+  }
+
+  .order-online > *{
+    max-width: 55ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .products{
+    flex-direction: row;
+    max-width: 1200px;
+    padding:0 5em;
+  }
+
+  .product{
+    margin: 0;
+    flex: 0 1 33%;
+  }
+
+  .product + .product{
+    margin-left: 1em;
+  }
+
+  .product img{
+    height: 330px;
+    width: 100%;
+  }
+
+  .product:last-of-type{
+    margin-bottom: 0;
+  }
+}
+
+/* Homepage Styles */
